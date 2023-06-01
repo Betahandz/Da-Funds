@@ -26,6 +26,45 @@
   align-items: flex-start;
   overflow: hidden;
 }
+.portfolio .show-message {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.219);
+  position: fixed;
+  backdrop-filter: blur(20px);
+  top: 70px;
+  z-index: -2;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio .show-message.showup {
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+}
+.portfolio .show-message .close-msg {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--white);
+  font-size: 2rem;
+}
+.portfolio .show-message .close-msg:hover {
+  color: red;
+}
+.portfolio .show-message .s-t {
+  font-family: var(--ub);
+  font-size: 3rem;
+  color: rgb(115, 175, 25);
+  transform: translate(-1000px);
+  transition: 0.3s 0.3s;
+}
+.portfolio .show-message .s-t.showup {
+  transform: translate(0px);
+}
 
 @media screen and (max-width: 450px) {
   .portfolio {

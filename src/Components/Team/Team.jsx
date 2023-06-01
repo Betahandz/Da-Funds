@@ -10,20 +10,21 @@ import pic7 from './../../Assets/bg/pexels-andrea-piacquadio-774909.jpg';
 import pic8 from './../../Assets/bg/pexels-andrea-piacquadio-712513.jpg';
 
 const teamData = [
-    {id: 1, src: pic1, title: "lorem" },
-    {id: 2, src: pic2, title: "lorem2"},
-    {id: 3, src: pic3, title: "lorem3"},
-    {id: 4, src: pic4},
-    {id: 5, src: pic5},
-    {id: 6, src: pic6},
-    {id: 7, src: pic7},
-    {id: 8, src: pic8}
+    {id: 1, src: pic1, name: "Kebs Emma"},
+    {id: 2, src: pic2, name: "Emmy Darell"},
+    {id: 3, src: pic3, name: "Buro Millenial"},
+    {id: 4, src: pic4, name: "Endmond Dantes"},
+    {id: 5, src: pic5, name: "Andrew Matt"},
+    {id: 6, src: pic6, name: "Mathew Murdock"},
+    {id: 7, src: pic7, name: "Andrea Black"},
+    {id: 8, src: pic8, name: "Adam Stones"}
 ]
 
-const Profile = ({src, title, id}) => {
+const Profile = ({src, name, id}) => {
     return <div className="team-member-card shrink">
         <img src={src} alt={id} />
-        {/* <h4 className="name">{title}</h4> */}
+        <div className="overlay"></div>
+        <h4 className="name">{name}</h4>
     </div>
 }
 
