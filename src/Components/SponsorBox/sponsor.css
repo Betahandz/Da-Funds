@@ -19,3 +19,9 @@
 .sponsor-box:hover {
   background-color: var(--sky);
 }
+
+@media screen and (max-width: 450px) {
+  .sponsor-box {
+    height: 25vh;
+  }
+}
