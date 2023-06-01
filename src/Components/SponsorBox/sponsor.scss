@@ -1,0 +1,22 @@
+.sponsor-box {
+    // background-color: var(--sky);
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .8s;
+    transform: translateY(1000px);
+    &.show-spon {
+        transform: translateY(0px);
+    }
+    .s-t {
+        color: var(--white);
+        font-family: var(--ub);
+        font-size: 30px;
+    }
+    &:hover {
+        background-color: var(--sky);
+    }
+}

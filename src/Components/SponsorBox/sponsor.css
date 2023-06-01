@@ -1,0 +1,21 @@
+.sponsor-box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.8s;
+  transform: translateY(1000px);
+}
+.sponsor-box.show-spon {
+  transform: translateY(0px);
+}
+.sponsor-box .s-t {
+  color: var(--white);
+  font-family: var(--ub);
+  font-size: 30px;
+}
+.sponsor-box:hover {
+  background-color: var(--sky);
+}

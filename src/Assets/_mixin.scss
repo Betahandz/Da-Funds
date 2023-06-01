@@ -1,0 +1,21 @@
+@mixin outline {
+    border: solid 2px white;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin spaceout($var) {
+    @if $var == light {
+        padding: 10px 40px;
+    }
+    @else if $var == medium {
+        padding: 20px 10px;
+    }
+    @else {
+        padding: 5px;
+    }
+}

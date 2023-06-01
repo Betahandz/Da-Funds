@@ -1,0 +1,53 @@
+@font-face {
+    font-family: bebas-neue;
+    src: url(./Assets/fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: ubuntubold;
+    src: url(./Assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: ubuntumed;
+    src: url(./Assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: ubuntureg;
+    src: url(./Assets/fonts/Ubuntu-Regular.ttf);
+}
+// *
+* {
+    padding: 0;
+    margin: 0;
+    resize: none;
+    box-sizing: border-box;
+}
+// root
+:root {
+    // typography
+    --bebas: bebas-neue;
+    --ub: ubuntubold;
+    --um: ubuntumed;
+    --ur: ubuntureg;
+    // colors
+    --navy: rgb(20, 30, 40);
+    --sky: rgb(163, 217, 238);
+    --white: #f9f9f9;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    #root {
+        width: inherit;
+        min-height: 100vh;
+        background-color: var(--navy);
+    }
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 120px;
+}

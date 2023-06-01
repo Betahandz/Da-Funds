@@ -1,0 +1,171 @@
+.home {
+    padding: 0;
+    position: relative;
+    isolation: isolate;
+    .master {
+        padding: 50px 120px 0px 120px;
+    }
+    .video-box {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        overflow: hidden;
+        isolation: isolate;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(20%);
+            // transition: .7s 1s;
+            opacity: 0;
+            z-index: -1;
+        }
+        .show-video {
+            transform: translateY(0);
+            opacity: 1;
+            transition: .3s;
+            z-index: 2;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        inset: 0;
+        background: linear-gradient(rgb(5, 5, 39) 10%, transparent);
+        z-index: -1;
+        padding: 50px 120px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        .detail {
+            // background-color: white;
+            overflow: hidden;
+            min-height: 200px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 20px;
+            position: relative;
+            .d-t {
+                font-family: var(--ub);
+                font-size: 50px;
+                position: absolute;
+                top: 0;
+                transform: translateX(-100%);
+                transition: .3s;
+                color: var(--white);
+                &.show {
+                    transform: translate(0%);
+                }
+            }
+            .emp {
+                color: var(--white);
+                font-size: 20px;
+                font-family: var(--um);
+                position: absolute;
+                transform: translateY(100%);
+                transition: .5s 1s;
+                opacity: 0;
+                &.show {
+                    transform: translate(0%);
+                    opacity: 1;
+                }
+            }
+        }
+        .video-counter {
+            width: 20%;
+            height: 20px;
+            // background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .pointer {
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: var(--white);
+                border-radius: 50%;
+                transition: .7s;
+                &.show {
+                    background-color: red;
+                    width: 100px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home {
+        .master {
+            padding: 20px 12px 0 12px;
+        }
+        .video-box {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            overflow: hidden;
+            isolation: isolate;
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(20%);
+                // transition: .7s 1s;
+                opacity: 0;
+                z-index: -1;
+            }
+            .show-video {
+                transform: translateY(0);
+                opacity: 1;
+                transition: .3s;
+                z-index: 2;
+            }
+        }
+        .overlay {
+            padding: 0 12px;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 20px;
+            .detail {
+                min-height: 250px;
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 5px;
+                position: relative;
+                .d-t {
+                    font-size: 2.5rem;
+                }
+                .emp {
+                    transform: translateY(100%);
+                    opacity: 0;
+                    &.show {
+                        transform: translate(0%);
+                        opacity: 1;
+                    }
+                }
+            }
+            .video-counter {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
